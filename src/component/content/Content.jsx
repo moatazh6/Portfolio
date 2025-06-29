@@ -8,7 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Content() {
   return (
-    <section className="bg-[#f3f4f6] min-h-screen flex flex-col items-center justify-center">
+    <section className="bg-[#f3f4f6] py-20 flex flex-col items-center justify-center">
       <div className="max-w-2xl text-center px-4">
         <h3 className="text-gray-600 text-xl mb-2">Welcome to my world</h3>
 
@@ -38,16 +38,17 @@ and a commitment to excellence.
           Download CV
         </a>
       </div>
-      <div className='social flex gap-5 mt-16'>
-        <h3 className='text-2xl mt-1'>FollowMe</h3>
-     <div className='flex  gap-6'>
-         <a className='text-2xl text-white mt-2  whatsapp' target='blank' href="https://wa.me/01011205794"><FaWhatsapp /></a>
-        <a className='text-2xl text-white mt-2  facebook' target='blank' href="https://www.facebook.com/moataz.hassan.355744"><FaFacebook /></a>  
-        <a className='text-2xl X text-white mt-2' target='blank' href="https://x.com/Mo3tazh3"><FaXTwitter /></a> 
-         <a className='text-2xl mt-2  text-white linkedin' target='blank' href="https://www.linkedin.com/in/moataz-hassan-8960332a4/"><FaLinkedin /></a>
-         <a className='text-2xl text-white mt-2 github' target='blank' href="https://github.com/moatazh6"><FaGithub /></a>
-     </div>
-      </div>
+    <div className='social flex flex-col items-center gap-5 mt-16 md:flex-row'>
+  <h3 className='text-2xl mt-1'>FollowMe</h3>
+  <div className='flex gap-6 flex-wrap justify-center'>
+    <a className='text-2xl text-white mt-2 whatsapp' target='blank' href="https://wa.me/01011205794"><FaWhatsapp /></a>
+    <a className='text-2xl text-white mt-2 facebook' target='blank' href="https://www.facebook.com/moataz.hassan.355744"><FaFacebook /></a>  
+    <a className='text-2xl X text-white mt-2' target='blank' href="https://x.com/Mo3tazh3"><FaXTwitter /></a> 
+    <a className='text-2xl mt-2 text-white linkedin' target='blank' href="https://www.linkedin.com/in/moataz-hassan-8960332a4/"><FaLinkedin /></a>
+    <a className='text-2xl text-white mt-2 github' target='blank' href="https://github.com/moatazh6"><FaGithub /></a>
+  </div>
+</div>
+
     </section>
     
   );

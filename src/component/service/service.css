@@ -55,3 +55,30 @@
 .service-card:hover .service-title {
   color: #f97316;
 }
+
+@media screen and (max-width: 500px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .service-card {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .service-icon {
+    font-size: 24px;
+    gap: 8px;
+  }
+
+  .service-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .services-header {
+    font-size: 24px;
+    padding: 10px;
+  }
+}
