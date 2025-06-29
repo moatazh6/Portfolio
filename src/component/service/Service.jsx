@@ -1,5 +1,5 @@
 import React from 'react';
-import './Service.css'; 
+import './service.css'; 
 import { FaLaptopCode } from "react-icons/fa";
 import { BsArrowDownRightCircleFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { FaPaintBrush } from "react-icons/fa";
 import { MdSpeed } from "react-icons/md";
 import { MdDevices } from "react-icons/md";
 import { FaPlug } from "react-icons/fa";
+
 export default function Service() {
   const services = [
     {
