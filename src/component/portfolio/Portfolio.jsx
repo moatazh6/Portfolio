@@ -1,6 +1,6 @@
 import React from "react";
 import './Portfolio.css';
-
+import {Link} from 'react-router-dom'
 import freshcart from '../../assets/freshcart.png';
 import recipe from '../../assets/recipe.png';
 import weather from '../../assets/weather.png';
@@ -12,42 +12,49 @@ import danile from '../../assets/daniel.png';
 
 const projects = [
   {
+    id: 1,
     title: "freshcart Website",
     description: "Modern responsive e-commerce site with cart and payment.",
     image: freshcart, 
     link: "https://fresh-cart-beta-ten.vercel.app",
   },
   {
+    id: 2,
     title: "Food Recipe",
     description: "Responsive app to explore global recipes.",
     image: recipe ,
     link: "https://recipe-ten-navy.vercel.app/",
   },
   {
+    id: 3,
     title: "Weather App",
     description: "Shows current weather using OpenWeatherMap API.",
     image: weather,
     link: "https://moatazh6.github.io/Weather-app/",
   },
   {
-    title: "Bookmarker",
-    description: "Manage your favorite links with full CRUD features.",
-    image: Bookmarker,
-    link: "https://moatazh6.github.io/CRUDS/",
-  },
-  {
+    id: 4,
     title: "Masar Project",
     description: "A website for a construction company.",
     image: masar,
     link: "https://moatazh6.github.io/Masar-Project/",
   },
   {
+    id: 5,
+    title: "Bookmarker",
+    description: "Manage your favorite links with full CRUD features.",
+    image: Bookmarker,
+    link: "https://moatazh6.github.io/CRUDS/",
+  },
+  {
+    id: 6,
     title: "Login App",
     description: "Login UI with localStorage validation.",
     image: login,
     link: "https://moatazh6.github.io/Login-and-Local-Storage/",
   },
   {
+    id: 7,
     title: "Daniel Portfolio",
     description: "A portfolio showcasing my work.",
     image: danile,
@@ -70,9 +77,9 @@ export default function Projects() {
             <div className="project-overlay">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <a className="button" href="../project-details/ProjectDetails.jsx">
-                Read More
-              </a>
+          <Link className="button" to={`/project/${project.id}`}>
+          Read More
+           </Link> 
             </div>
           </div>
         ))}
