@@ -16,6 +16,8 @@ function App() {
 
   return (
     <>
+    <div className='min-h-screen overflow-x-hidden'>
+
   <NavBar/>
   <Home/>
   <AboutMe/>
@@ -23,6 +25,7 @@ function App() {
   <Portfolio/>
   <Service/>
   <Contact/>
+    </div>
     </>
   )
 }
