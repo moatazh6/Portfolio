@@ -370,14 +370,14 @@ transition: all 0.5s ease-in-out;
 
   .profile-decor,
   .profile-decor2 {
-    width: 250px;
+    width: 200px;
     height: 180px;
     top: 40%;
      }
      
   .profile-decor3,
   .profile-decor4{
-    width: 250px;
+    width: 200px;
     height: 180px;
     top: 60%;
   }
