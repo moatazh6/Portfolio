@@ -1,24 +1,29 @@
 @keyframes typing-bg {
   0% {
     width: 0;
+    right: 0;
   }
   50% {
     width: 13ch;
+        right: 0;
+
   }
   100% {
     width: 0;
+        right: 0;
+
   }
 }
 
 @keyframes move-cursor {
   0% {
-    left: 0;
+    right: 0;
   }
   50% {
-    left: 13ch;
+    right: 13ch;
   }
   100% {
-    left: 0;
+    right: 0;
   }
 }
 
@@ -37,7 +42,7 @@
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  right:  0;
   height: 100%;
   background-color: white;
   z-index: 2;
@@ -47,7 +52,7 @@
 .animate-cursor {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 2px;
   height: 100%;
   background-color: #f97316;
