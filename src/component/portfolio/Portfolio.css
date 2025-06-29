@@ -1,0 +1,86 @@
+.projects-section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  span {
+    color: #f97316;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: center;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+
+.project-card:hover  {
+        border: 3px solid #f97316; 
+}
+
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-overlay p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.button {
+  color: #f97316;
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+
+.project-button:hover {
+  background-color: #ea580c;
+}

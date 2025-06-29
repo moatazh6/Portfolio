@@ -1,0 +1,82 @@
+@keyframes typing-bg {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 13ch;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes move-cursor {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 13ch;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.animate-cursor-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 13ch;
+  font-size: 2.5rem;
+  color: #f97316;
+  white-space: nowrap;
+    -webkit-text-stroke: 1px #f97316;
+    color: transparent;
+}
+
+.animate-cursor-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  z-index: 2;
+  animation: typing-bg 4s steps(13) infinite;
+}
+
+.animate-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #f97316;
+  z-index: 3;
+  animation: move-cursor 4s steps(13) infinite;
+}
+
+
+
+
+.whatsapp, .facebook, .X, .github, .linkedin {
+  border: 2px solid #f97316;
+  border-radius: 50%;
+  padding: 5px;
+  background: #272727;
+  transition: transform 0.3s;
+}
+
+.whatsapp:hover,
+.facebook:hover,
+.X:hover,
+.github:hover,
+.linkedin:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .typing-effect {
+    font-size: 3rem;
+  }
+}
+

@@ -1,0 +1,29 @@
+.card{
+    background: #F4610B;
+    margin-bottom: 200px;
+ transition: all 0.5s ease-in-out;
+}
+.card:hover{
+   transform: skew(5deg);
+   box-shadow: #F4610B 10px 0px 0px 3px;
+   /* transition: transform 0.5s ease-in-out; */
+}
+
+.header {
+    margin-left: 5%;
+    h6{
+        color: #272727;
+        font-size: 24px;
+        font-weight: SemiBold;
+    }
+    h5{
+        color: #F4610B;
+        font-weight: SemiBold;
+        font-size: 32px;
+    }
+    p{
+        color: #616161;
+        font-size: 16px;
+    }
+
+}
