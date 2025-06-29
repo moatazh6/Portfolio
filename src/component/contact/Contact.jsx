@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact" className=" py-16">
+    <section id="contact" className=" pt-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10  shadow-lg rounded-2xl p-8 lg:p-16">
         
         <div className="flex-1 space-y-6 text-center lg:text-left">
