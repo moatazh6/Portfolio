@@ -23,13 +23,15 @@ export default function Content() {
 
 
         <h3 className="text-xl md:text-2xl font-medium mb-3">
-          Creative <span className="text-orange-500 font-semibold">Engineering</span> <span className="text-orange-500 font-semibold">Programming</span>
+          Creative <span className="text-orange-500 font-semibold">Frontend Developer</span> 
         </h3>
 
         <p className="text-gray-500 leading-relaxed mb-6">
-          I am a software engineer specializing in developing systems and applications using the latest technologies. 
-          I design and build software solutions. I have extensive experience in programming languages, 
-          database management, and systems analysis.
+       I'm Moataz Hassan. I am a dedicated and aspiring Frontend Developer with a strong passion for web
+development, specializing in React.js. Eager to expand my skills and knowledge, I continuously seek out
+learning opportunities and hands-on projects. My goal is to contribute to innovative web applications that
+provide exceptional user experiences. I am on a journey to becoming a Front-end Developer, driven by curiosity
+and a commitment to excellence.
         </p>
 
         <a target='blank' href='https://drive.google.com/file/d/1doNNgAsDUa-PDKdUamUPjPHHs5ITQqvN/view?usp=sharing' className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
