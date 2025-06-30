@@ -45,3 +45,9 @@ textarea{
         color: #fff;
         opacity: 70%;
     }
+#contact .phone,#contact .email,#contact .address{
+    color: #F4610B;
+}
+    .dark #contact .phone,.dark #contact .email,.dark #contact .address{
+        color: #F4610B;
+    }

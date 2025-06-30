@@ -220,6 +220,8 @@
 
 .dark .overlay {
   background-color: #111827; 
+  opacity: 0.9;
+
   color: white;
 }
 
@@ -229,4 +231,11 @@
 
 .dark .overlay .stat h1 {
   color: #fb923c; 
+}
+
+.dark .profile-decor,
+.dark .profile-decor2,
+.dark .profile-decor3,
+.dark .profile-decor4 {
+  border: 3px solid #6F6F6F;
 }

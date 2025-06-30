@@ -23,7 +23,7 @@ export default function Contact() {
     <FaPhoneAlt className="text-orange-500 text-2xl" />
   </div>
   <a href="https://wa.me/01011205794" className="text-left">
-    <h4 className="font-semibold">Phone</h4>
+    <h4 className="font-semibold phone">Phone</h4>
     <p className="text-sm text-gray-600">(+02) 01011205794</p>
   </a>
 </div>
@@ -33,7 +33,7 @@ export default function Contact() {
     <FaEnvelope className="text-orange-500 text-2xl" />
   </div>
   <a href="mailto:moatazmoata56@gmail.com" className="text-left">
-    <h4 className="font-semibold">Email</h4>
+    <h4 className="font-semibold email">Email</h4>
     <p className="text-sm text-gray-600">moatazmoata56@gmail.com</p>
   </a>
 </div>
@@ -44,7 +44,7 @@ export default function Contact() {
             <FaMapMarkerAlt className="text-orange-500 text-2xl" />
             </div>
             <a href="https://www.google.com/maps/place/Zakaria+ellithy/@29.9281173,31.8582742,10z/data=!4m10!1m2!2m1!1sZakaria+El-Laithy+Street,+Omrania+Gharbia,+Giza,+Egypty!3m6!1s0x145849ebf62e0349:0x7bd919fa9fba1a0b!8m2!3d29.9281173!4d31.248533!15sCjZaYWthcmlhIEVsLUxhaXRoeSBTdHJlZXQsIE9tcmFuaWEgR2hhcmJpYSwgR2l6YSwgRWd5cHSSAQ9ob3VzaW5nX2NvbXBsZXiqAYoBEAEqLCIoemFrYXJpYSBlbCBsYWl0aHkgc3RyZWV0IG9tcmFuaWEgZ2hhcmJpYSgAMh8QASIbwCCU7jjYHaR6iYfCq5FaWNId0zblZrfSPeQ5MjcQAiIzemFrYXJpYSBlbCBsYWl0aHkgc3RyZWV0IG9tcmFuaWEgZ2hhcmJpYSBnaXphIGVneXB04AEA!16s%2Fg%2F11nssk1xxl?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D" className="text-left">
-              <h4 className="font-semibold">Address</h4>
+              <h4 className="font-semibold address">Address</h4>
               <p className="text-sm text-gray-600">Zakaria El-Laithy Street, Omrania Gharbia, Giza, Egypty</p>
 </a>
           </div>
