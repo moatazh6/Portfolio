@@ -217,7 +217,16 @@
     border-radius: 0;
   }
 }
-
+@media screen and (max-width: 400px) {
+ .profile-wrapper .overlay {
+  width: 110%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 40px;
+}
+  
+}
 .dark .overlay {
   background-color: #111827; 
   opacity: 0.9;
