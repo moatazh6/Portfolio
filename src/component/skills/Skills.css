@@ -7,3 +7,16 @@ section header h1{
 span{
     color: #F4610B;
 }
+
+.dark .back{
+    background: #111827;
+}
+
+.dark #skills{
+    background: #1b1b1b;
+   
+}
+
+.dark .skills{
+    color: #fff;
+}

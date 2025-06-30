@@ -40,13 +40,13 @@ export default function SkillsMarquee() {
   return (
     <section className="py-10" id="skills">
       <header className="mb-8">
-        <h1>My <span>Skills</span></h1>
+        <h1 className="skills">My <span>Skills</span></h1>
       </header>
-      <Marquee speed={120} pauseOnHover={false} gradient={true}>
+      <Marquee speed={120} pauseOnHover={false} gradient={false}>
         {icons.map((item, index) => (
           <div
             key={index}
-            className="mx-6 bg-white p-4 rounded-xl shadow-md hover:scale-105 duration-300 flex flex-col items-center"
+            className="back mx-6 bg-white p-4 rounded-xl shadow-md hover:scale-105 duration-300 flex flex-col items-center"
             style={{ border: `3px solid ${item.color}` }}
           >
             <img src={item.img} alt="tech" className="h-16 w-16 object-contain" />

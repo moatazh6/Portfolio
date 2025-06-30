@@ -32,3 +32,25 @@
     animation: glowText 3s ease-in-out infinite;
 
 }
+
+.dark #details{
+  background-color: #272727;
+}
+.dark .project{
+  background-color: #272727;
+}
+.dark .image{
+  background-color: #272727;
+}
+
+.dark .tech{
+  color: #f97316;
+}
+
+.dark header h1{
+  color: #fff;
+}
+
+.dark .project .desc , .dark .project h3{
+  color: #fff;
+}

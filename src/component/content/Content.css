@@ -5,13 +5,11 @@
   }
   50% {
     width: 13ch;
-        right: 0;
-
+    right: 0;
   }
   100% {
     width: 0;
-        right: 0;
-
+    right: 0;
   }
 }
 
@@ -34,19 +32,27 @@
   font-size: 2.5rem;
   color: #f97316;
   white-space: nowrap;
-    -webkit-text-stroke: 1px #f97316;
-    color: transparent;
+  -webkit-text-stroke: 1px #f97316;
+  color: transparent;
 }
 
 .animate-cursor-wrapper::after {
   content: '';
   position: absolute;
   top: 0;
-  right:  0;
+  right: 0;
   height: 100%;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 2;
   animation: typing-bg 4s steps(13) infinite;
+}
+
+.dark .animate-cursor-wrapper::after {
+  background-color: #151515; 
+}
+
+.dark .creative{
+    color: #fff;
 }
 
 .animate-cursor {
@@ -60,15 +66,13 @@
   animation: move-cursor 4s steps(13) infinite;
 }
 
-
-
-
 .whatsapp, .facebook, .X, .github, .linkedin {
   border: 2px solid #f97316;
   border-radius: 50%;
   padding: 5px;
   background: #272727;
   transition: transform 0.3s;
+  color: white;
 }
 
 .whatsapp:hover,
@@ -79,9 +83,23 @@
   transform: scale(1.1);
 }
 
+.dark .whatsapp,
+.dark .facebook,
+.dark .X,
+.dark .github,
+.dark .linkedin {
+  background-color: transparent;
+  color: #fff;
+}
+.dark section .hi{
+  color: #fff;
+}
+
+.dark .social h3{
+  color: #fff;
+}
 @media (min-width: 768px) {
   .typing-effect {
     font-size: 3rem;
   }
 }
-

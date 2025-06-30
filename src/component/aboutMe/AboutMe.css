@@ -8,6 +8,10 @@
    box-shadow: #F4610B 10px 0px 0px 3px;
 }
 
+.dark #about{
+background: #1B1B1B;    
+}
+
 .header {
     margin-left: 5%;
     h6{
@@ -25,4 +29,20 @@
         font-size: 16px;
     }
 
+}
+
+.dark .header h6{
+    color: #fff;
+}
+.dark .card h1{
+    color: #F4610B;
+}
+
+.dark .content h3{
+    color: #fff;
+}
+.dark .card{
+    background: #272727;
+    margin-bottom: 200px;
+ transition: all 0.5s ease-in-out;
 }

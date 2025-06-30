@@ -14,3 +14,34 @@ textarea{
         color: #F4610B;
     
     }
+
+
+    .dark #contact{
+        background: #151515;
+    }
+
+    .dark .box{
+        background-color: #272727;
+    }
+
+    
+    .dark input{
+        background: #1B1B1B;
+       
+    }
+    
+    .dark textarea{
+        background: #1B1B1B;
+        
+    }
+    .dark .box1{
+        background-color: #272727;
+    }
+
+    .dark .header{
+        color: #fff;
+    }
+    .dark .header1{
+        color: #fff;
+        opacity: 70%;
+    }

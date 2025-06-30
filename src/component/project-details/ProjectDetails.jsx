@@ -93,17 +93,17 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8" id='details'>
       <div className="max-w-6xl mx-auto">
         <header>
           <h1 className='text-2xl md:text-4xl font-bold mb-4'>Latest<span> Project</span></h1>
         </header>
-        <div className="flex flex-col lg:flex-row bg-white rounded-lg shadow-xl overflow-hidden mb-12">
+        <div className="project flex flex-col lg:flex-row bg-white rounded-lg shadow-xl overflow-hidden mb-12">
           <div className="lg:w-1/2 p-6 md:p-10 flex flex-col justify-center">
             <p className="num text-6xl font-extrabold text-gray-300 mb-4">{project.number}</p>
             <h3 className="text-3xl font-bold text-gray-800 mb-4">{project.title}</h3>
-            <p className="text-gray-600 mb-4">{project.description}</p>
-            <p className="text-gray-700 font-semibold mb-6">{project.technologies.join(', ')}</p>
+            <p className="desc text-gray-600 mb-4">{project.description}</p>
+            <p className="tech text-gray-700 font-semibold mb-6">{project.technologies.join(', ')}</p>
             <div className="flex gap-4 flex-wrap">
               <a
                 href={project.githubLink}

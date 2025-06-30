@@ -13,11 +13,10 @@ import ProjectDetails from './component/project-details/ProjectDetails';
 
 function App() {
   return (
-    <div className='min-h-screen overflow-x-hidden'>
+    <div className="min-h-screen overflow-x-hidden bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
       <NavBar />
 
       <Routes>
-        {/* صفحة الهوم وكل الأقسام */}
         <Route
           path="/"
           element={
@@ -32,7 +31,6 @@ function App() {
           }
         />
 
-        {/* صفحة التفاصيل بناء على ID */}
         <Route path="/project/:id" element={<ProjectDetails />} />
       </Routes>
     </div>

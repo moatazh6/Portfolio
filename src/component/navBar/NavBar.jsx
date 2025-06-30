@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -6,15 +6,13 @@ import './NavBar.css';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark", !darkMode);
+    document.documentElement.classList.toggle("dark");
   };
 
   const handleNavClick = (sectionId) => {
@@ -34,16 +32,8 @@ export default function NavBar() {
     }
   };
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-md sticky top-0 w-full z-10 transition-colors duration-300">
+    <nav className="bg-white  shadow-md sticky top-0 w-full z-10 transition-colors duration-300">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <h1 className="text-2xl font-bold dark:text-white">Moataz</h1>
 
@@ -56,9 +46,14 @@ export default function NavBar() {
         </ul>
 
         <div className="flex items-center space-x-4">
-          <button onClick={toggleDarkMode} className="text-2xl text-gray-700 dark:text-yellow-300 transition-colors duration-300">
-            {darkMode ? <MdLightMode className='text-yellow-400' /> : <MdDarkMode className='text-gray-900' />}
-          </button>
+       <button onClick={toggleDarkMode} className="dark-mode-toggle">
+  <span className="dark:hidden">
+    <MdDarkMode />
+  </span>
+  <span className="hidden dark:inline">
+    <MdLightMode />
+  </span>
+</button>
 
           <button className="lg:hidden text-3xl text-orange-500" onClick={toggleMenu}>
             {isOpen ? <HiX /> : <HiMenu />}

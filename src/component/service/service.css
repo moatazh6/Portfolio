@@ -82,3 +82,18 @@
     padding: 10px;
   }
 }
+
+.dark #service{
+    background-color: #1B1B1B;
+}
+
+.dark .service-card{
+    background-color: #272727;
+}
+
+.dark .service-icon , .dark .service-title{
+    color: #fff;
+}
+.dark .services-header{
+    color: #fff;
+}

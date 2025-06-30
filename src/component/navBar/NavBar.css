@@ -2,3 +2,64 @@
      -webkit-text-stroke: 1px #f97316;
     color: transparent;
 }
+
+nav {
+  transition: background-color 0.3s ease-in-out;
+  background-color: white;
+}
+
+.dark nav {
+  background-color: #111827; 
+}
+
+nav h1 {
+  color: black;
+  transition: color 0.3s;
+}
+
+.dark nav h1 {
+  color: white;
+}
+
+nav ul li span {
+  color: #c2410c; 
+  transition: color 0.3s;
+}
+
+nav ul li span:hover {
+  color: #ea580c; 
+}
+
+.dark nav ul li span {
+  color: #e5e7eb; 
+}
+
+.dark nav ul li span:hover {
+  color: #fb923c;
+}
+
+.dark-mode-toggle {
+  font-size: 1.5rem;
+  color: #374151; 
+  transition: color 0.3s;
+}
+
+.dark .dark-mode-toggle {
+  color: #facc15; 
+}
+
+.dark-icon {
+  display: none;
+}
+
+.dark .light-icon {
+  display: none;
+}
+
+.dark .dark-icon {
+  display: inline;
+}
+
+.dark nav{
+    background-color: #151515;
+}

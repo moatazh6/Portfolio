@@ -84,3 +84,11 @@
 .project-button:hover {
   background-color: #ea580c;
 }
+
+.dark .projects-section{
+    background-color: #151515;
+}
+
+.dark .projects-title{
+    color: #fff;
+}
