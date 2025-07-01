@@ -11,17 +11,28 @@ export default function NavBar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    const darkClass = document.documentElement.classList.contains("dark");
-    setIsDarkMode(darkClass);
-  }, []);
+ useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    setIsDarkMode(savedTheme === "dark");
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle("dark", prefersDark);
+    setIsDarkMode(prefersDark);
+  }
+}, []);
+
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const toggleDarkMode = () => {
-    document.documentElement.classList.toggle("dark");
-    setIsDarkMode(!isDarkMode);
-  };
+  const newMode = !isDarkMode;
+  document.documentElement.classList.toggle("dark", newMode);
+  localStorage.setItem("theme", newMode ? "dark" : "light");
+  setIsDarkMode(newMode);
+};
+
 
   const handleNavClick = (sectionId) => {
     if (location.pathname !== '/') {
