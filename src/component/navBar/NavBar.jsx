@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import React, { useState, useEffect } from 'react';
+import { FaMoon } from "react-icons/fa";
+import { IoSunnyOutline } from "react-icons/io5";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useNavigate, useLocation } from 'react-router-dom';
 import './NavBar.css';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    const darkClass = document.documentElement.classList.contains("dark");
+    setIsDarkMode(darkClass);
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
+    setIsDarkMode(!isDarkMode);
   };
 
   const handleNavClick = (sectionId) => {
@@ -33,7 +41,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="bg-white  shadow-md sticky top-0 w-full z-10 transition-colors duration-300">
+    <nav className="bg-white shadow-md sticky top-0 w-full z-50 transition-colors duration-300 dark:bg-gray-900">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <h1 className="text-2xl font-bold dark:text-white">Moataz</h1>
 
@@ -46,14 +54,9 @@ export default function NavBar() {
         </ul>
 
         <div className="flex items-center space-x-4">
-       <button onClick={toggleDarkMode} className="dark-mode-toggle">
-  <span className="dark:hidden">
-    <MdDarkMode />
-  </span>
-  <span className="hidden dark:inline">
-    <MdLightMode />
-  </span>
-</button>
+          <button onClick={toggleDarkMode} className="dark-mode-toggle">
+            {isDarkMode ? <IoSunnyOutline /> : <FaMoon />}
+          </button>
 
           <button className="lg:hidden text-3xl text-orange-500" onClick={toggleMenu}>
             {isOpen ? <HiX /> : <HiMenu />}
@@ -62,7 +65,7 @@ export default function NavBar() {
       </div>
 
       {isOpen && (
-        <ul className="lg:hidden bg-white dark:bg-gray-800 px-6 py-4 space-y-3 text-orange-700 dark:text-gray-200 animate-slide-down transition-all duration-300 ease-out">
+        <ul className="lg:hidden bg-white dark:bg-gray-800 px-6 py-4 space-y-3 text-orange-700 dark:text-gray-200 transition-all duration-300 ease-out">
           <li><span className="block py-1 cursor-pointer" onClick={() => handleNavClick('home')}>Home</span></li>
           <li><span className="block py-1 cursor-pointer" onClick={() => handleNavClick('about')}>About</span></li>
           <li><span className="block py-1 cursor-pointer" onClick={() => handleNavClick('skills')}>Skills</span></li>
