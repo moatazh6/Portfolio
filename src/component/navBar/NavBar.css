@@ -63,3 +63,33 @@ nav ul li span:hover {
 .dark nav{
     background-color: #151515;
 }
+
+.mobile-menu {
+  background-color: white;
+  padding: 1rem 1.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dark .mobile-menu {
+  background-color: #151515;
+}
+
+.mobile-menu li span {
+  display: block;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: #c2410c;
+  transition: color 0.3s;
+}
+
+.mobile-menu li span:hover {
+  color: #ea580c;
+}
+
+.dark .mobile-menu li span {
+  color: #e5e7eb;
+}
+
+.dark .mobile-menu li span:hover {
+  color: #fb923c;
+}

@@ -76,7 +76,7 @@ export default function NavBar() {
       </div>
 
       {isOpen && (
-        <ul className="lg:hidden bg-white dark:bg-gray-800 px-6 py-4 space-y-3 text-orange-700 dark:text-gray-200 transition-all duration-300 ease-out">
+        <ul className="lg:hidden mobile-menu bg-white dark:bg-gray-800 px-6 py-4 space-y-3 text-orange-700 dark:text-gray-200 transition-all duration-300 ease-out">
           <li><span className="block py-1 cursor-pointer" onClick={() => handleNavClick('home')}>Home</span></li>
           <li><span className="block py-1 cursor-pointer" onClick={() => handleNavClick('about')}>About</span></li>
           <li><span className="block py-1 cursor-pointer" onClick={() => handleNavClick('skills')}>Skills</span></li>
