@@ -28,7 +28,7 @@
 
 .green-dot{
   color:#22c55e;
-  animation: pulse 1.5s infinite;
+  animation: pulse 2s infinite;
 }
 @keyframes pulse {
   0% ,100%{
