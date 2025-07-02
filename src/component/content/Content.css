@@ -25,6 +25,20 @@
   }
 }
 
+
+.green-dot{
+  color:#22c55e;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% ,100%{
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  
+}
 .animate-cursor-wrapper {
   position: relative;
   display: inline-block;
@@ -96,6 +110,10 @@
 }
 
 .dark .social h3{
+  color: #fff;
+}
+
+.dark .Available{
   color: #fff;
 }
 @media (min-width: 768px) {

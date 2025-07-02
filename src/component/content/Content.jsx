@@ -2,12 +2,21 @@ import React from 'react';
 import './Content.css';
 import { FaFacebook, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { BsCircleFill } from "react-icons/bs";
+
 
 export default function Content() {
   return (
     <section className="bg-[#f3f4f6] dark:bg-gray-900 py-20 flex flex-col items-center justify-center transition-colors duration-300">
+        <h1 className=' text-base font-bold mb-10'>
+          <BsCircleFill className="green-dot inline-block mr-2" />
+          <span className='Available mt-2'>
+
+          Available for Work
+          </span>
+          </h1>
       <div className="max-w-2xl text-center px-4">
-        <h3 className="text-gray-600 dark:text-gray-300 text-xl mb-2">
+        <h3 className="text-gray-600 dark:text-gray-300 text-2xl mb-2">
           Welcome to my world
         </h3>
 
