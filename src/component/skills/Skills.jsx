@@ -16,6 +16,9 @@ import jquery from '../../assets/jquery.svg';
 import npm from '../../assets/npm.png';
 import typescript from '../../assets/typescript.png'
 import './Skills.css';
+import AOS  from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 export default function SkillsMarquee() {
   const icons = [
@@ -37,15 +40,24 @@ export default function SkillsMarquee() {
     {img: typescript, color: '#3178c6', disc: 'Typescript'},
   ];
 
+
+    useEffect(() => {
+      AOS.init({
+        duration: 800,
+        once: true, 
+      });
+    }, []);
+
   return (
     <section className="py-10" id="skills">
       <header className="mb-8">
-        <h1 className="skills">My <span>Skills</span></h1>
+        <h1 className="skills" data-aos="fade-down">My <span>Skills</span></h1>
       </header>
       <Marquee speed={120} pauseOnHover={false} gradient={false}>
         {icons.map((item, index) => (
           <div
             key={index}
+            data-aos="zoom-in"
             className="back mx-6 bg-white p-4 rounded-xl shadow-md hover:scale-105 duration-300 flex flex-col items-center"
             style={{ border: `3px solid ${item.color}` }}
           >

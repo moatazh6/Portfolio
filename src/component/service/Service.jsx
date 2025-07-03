@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './service.css'; 
 import { FaLaptopCode } from "react-icons/fa";
 import { BsArrowDownRightCircleFill } from "react-icons/bs";
@@ -7,6 +7,8 @@ import { FaPaintBrush } from "react-icons/fa";
 import { MdSpeed } from "react-icons/md";
 import { MdDevices } from "react-icons/md";
 import { FaPlug } from "react-icons/fa";
+import  AOS  from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Service() {
   const services = [
@@ -52,13 +54,19 @@ export default function Service() {
     },
   ];
 
+ useEffect(() => {
+      AOS.init({
+        duration: 800,
+        once: true, 
+      });
+    }, []);
 
   return (
     <section id="service" className="services-section">
-      <h2 className="services-header"> My <span className='services-title'>Services</span></h2>
+      <h2 className="services-header" data-aos="fade-down"> My <span className='services-title'>Services</span></h2>
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <div className="service-card" key={index} data-aos="zoom-in">
             <div className="service-icon flex flex-col-3 justify-between">{service.icon} {service.icon2}</div>
             <h3 className="service-title">{service.title}</h3>
             <p>{service.description}</p>

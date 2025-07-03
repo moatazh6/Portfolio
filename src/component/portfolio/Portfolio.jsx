@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Portfolio.css';
 import {Link} from 'react-router-dom'
 import freshcart from '../../assets/freshcart.png';
@@ -8,6 +8,8 @@ import masar from '../../assets/masar.png';
 import Bookmarker from '../../assets/Bookmarker.png';
 import login from '../../assets/login.png';
 import danile from '../../assets/daniel.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const projects = [
@@ -65,13 +67,21 @@ const projects = [
 
 
 export default function Projects() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, 
+    });
+  }, []);
+
+
   return (
     <section className="projects-section">
-      <h2 className="projects-title">My <span>Projects</span></h2>
+      <h2 className="projects-title" data-aos="fade-down">My <span>Projects</span></h2>
 
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+          <div className="project-card" key={index} data-aos="zoom-in">
             <img src={project.image} alt={project.title} className="project-image" />
 
             <div className="project-overlay">

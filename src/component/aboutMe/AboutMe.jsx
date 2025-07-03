@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './AboutMe.css'
 import { FaGlobe} from "react-icons/fa";
 import { FaPaintBrush } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
 import { TbApi } from "react-icons/tb";
 import { CiMobile3 } from "react-icons/ci";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function AboutMe() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  })
   
       const services = [
       {
@@ -41,12 +50,12 @@ export default function AboutMe() {
   return (
     <section id="about" className="p-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center ">
-        <div className="card flex flex-col justify-center items-center text-3xl  rounded-2xl py-32 bg-orange-500 mt-24">
+        <div className="card flex flex-col justify-center items-center text-3xl   rounded-2xl py-32 bg-orange-500 mt-24"    data-aos="fade-right" data-aos-delay="50">
           <h1 className="mb-2">+05</h1>
           <h3 className="text-base md:text-lg text-center font-medium text-white">The technology I have</h3>
         </div>
 
-        <div className="md:col-span-2 text-center md:text-left   ">
+        <div className="md:col-span-2 text-center md:text-left"   data-aos="fade-left" >
           <div className="header">
             <h6 className='header1' >About myself</h6>
             <h5>What I Do as a Front-End Developer</h5>
