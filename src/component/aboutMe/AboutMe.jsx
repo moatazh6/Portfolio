@@ -55,8 +55,8 @@ export default function AboutMe() {
           <h3 className="text-base md:text-lg text-center font-medium text-white">The technology I have</h3>
         </div>
 
-        <div className="md:col-span-2 text-center md:text-left"   data-aos="fade-left" >
-          <div className="header">
+        <div className="md:col-span-2 text-center md:text-left"    >
+          <div className="header" data-aos="fade-left">
             <h6 className='header1' >About myself</h6>
             <h5>What I Do as a Front-End Developer</h5>
             <p>I specialize in building modern, responsive, and interactive web interfaces. My focus is on creating user-friendly experiences using the latest front-end technologies. I also collaborate with teams to ensure seamless integration between front-end and back-end system</p>
@@ -64,7 +64,7 @@ export default function AboutMe() {
                <div className="py-12 px-4 bg-[#f3f4f6]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
         {services.map((service, index) => (
-          <div key={index} className="flex items-start gap-4">
+          <div key={index} className="flex items-start gap-4 " data-aos="fade-left">
             <div className="bg-orange-500 text-white rounded-l-3xl p-3">
               {service.icon}
             </div>
