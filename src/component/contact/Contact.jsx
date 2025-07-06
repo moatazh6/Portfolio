@@ -8,7 +8,7 @@ export default function Contact() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false, // الأنيميشن يتكرر عند الدخول والخروج
+      once: false,
     });
   }, []);
 
@@ -16,7 +16,6 @@ export default function Contact() {
     <section id="contact" className="pt-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 shadow-lg rounded-2xl p-8 lg:p-16">
         
-        {/* Left Side - Info */}
         <div
           className="flex-1 space-y-6 text-center lg:text-left"
           data-aos="fade-right"
@@ -31,8 +30,7 @@ export default function Contact() {
             team, we become stronger and achieve our goals more quickly.
           </p>
 
-          {/* Phone */}
-          <div className="flex items-center gap-4 p-4 rounded-xl">
+          <div className="flex items-center gap-4 p-4 rounded-xl" data-aos="fade-right">
             <div className="bg-orange-100 p-4 rounded-2xl box1">
               <FaPhoneAlt className="text-orange-500 text-2xl" />
             </div>
@@ -42,8 +40,7 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Email */}
-          <div className="flex items-center gap-4 p-4 rounded-xl">
+          <div className="flex items-center gap-4 p-4 rounded-xl" data-aos="fade-right">
             <div className="bg-orange-100 p-4 rounded-2xl box1">
               <FaEnvelope className="text-orange-500 text-2xl" />
             </div>
@@ -53,8 +50,7 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Address */}
-          <div className="flex items-center gap-4 p-4 rounded-xl">
+          <div className="flex items-center gap-4 p-4 rounded-xl" data-aos="fade-right">
             <div className="bg-orange-100 p-4 rounded-2xl box1">
               <FaMapMarkerAlt className="text-orange-500 text-2xl" />
             </div>
@@ -70,7 +66,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Side - Form */}
         <form
           className="contact flex-1 space-y-4 w-full bg-white p-6 rounded-2xl box"
           data-aos="fade-left"
