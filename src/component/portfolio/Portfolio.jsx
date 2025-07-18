@@ -82,7 +82,7 @@ export default function Projects() {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index} data-aos="zoom-in">
-            <img src={project.image} alt={project.title} className="project-image" />
+            <img src={project.image} alt={project.title} loading="lazy" className="project-image" />
 
             <div className="project-overlay">
               <h3>{project.title}</h3>

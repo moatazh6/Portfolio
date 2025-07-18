@@ -29,6 +29,7 @@ export default function ProfileCard() {
         <div className="profile-img-container">
           <img
             src={img}
+            loading='lazy'
             alt="Profile"
             className="profile-img"
           />

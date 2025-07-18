@@ -61,7 +61,7 @@ export default function SkillsMarquee() {
             className="back mx-6 bg-white p-4 rounded-xl shadow-md hover:scale-105 duration-300 flex flex-col items-center"
             style={{ border: `3px solid ${item.color}` }}
           >
-            <img src={item.img} alt="tech" className="h-16 w-16 object-contain" />
+            <img src={item.img} alt="tech" loading="lazy" className="h-16 w-16 object-contain" />
             <h6 className="text-lg font-semibold mt-2" style={{ color: item.color }}>{item.disc}</h6>
           </div>
         ))}

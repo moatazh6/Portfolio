@@ -130,6 +130,7 @@ const ProjectDetails = () => {
   <img
     src={project.screenshot}
     alt={project.title}
+    loading='lazy'
     className=" max-w-md shadow-lg"
     style={{ borderRadius: "0 100px 0 100px" }} 
   />

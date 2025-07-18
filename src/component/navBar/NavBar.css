@@ -1,6 +1,11 @@
-.container h1{
-     -webkit-text-stroke: 1px #f97316;
-    color: transparent;
+.container h1 {
+  -webkit-text-stroke: 1px #f97316;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.dark .container h1 {
+  color: #111827;
 }
 
 nav {
@@ -9,7 +14,7 @@ nav {
 }
 
 .dark nav {
-  background-color: #111827; 
+  background-color: #151515; 
 }
 
 nav h1 {
@@ -22,30 +27,37 @@ nav h1 {
 }
 
 nav ul li span {
-  color: #c2410c; 
+  color: #c2410c;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 nav ul li span:hover {
-  color: #ea580c; 
+  color: #ea580c;
 }
 
 .dark nav ul li span {
-  color: #e5e7eb; 
+  color: #e5e7eb;
 }
 
 .dark nav ul li span:hover {
   color: #fb923c;
 }
 
+nav ul li span:focus,
+.mobile-menu li span:focus {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
 .dark-mode-toggle {
   font-size: 1.5rem;
-  color: #374151; 
+  color: #f97316;
   transition: color 0.3s;
 }
 
 .dark .dark-mode-toggle {
-  color: #facc15; 
+  color: #facc15;
 }
 
 .dark-icon {
@@ -60,14 +72,26 @@ nav ul li span:hover {
   display: inline;
 }
 
-.dark nav{
-    background-color: #151515;
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .mobile-menu {
   background-color: white;
   padding: 1rem 1.5rem;
   transition: background-color 0.3s ease-in-out;
+  animation: slideDown 0.3s ease-out forwards;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 8px 8px;
+  position: relative;
+  z-index: 50;
 }
 
 .dark .mobile-menu {
